@@ -13,10 +13,9 @@ node {
     try {
         generic.checkout(url, 'github-token1', 'main')
         generic.gitleaks()
-        
         archiveArtifacts artifacts: 'CredScanReport'
         
-        generic.trivyinstaller(url) // Ensure `trivyinstaller` function in shared library handles `url` correctly
+        generic.trivyinstaller(url) 
         archiveArtifacts artifacts: 'trivy-license-report.json'
         
     } catch (Exception e) {
