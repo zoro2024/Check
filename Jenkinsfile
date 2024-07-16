@@ -1,4 +1,4 @@
-@Library('shared-libot') _   // final Scripted pipeline it use 4 functions from src- checkout, gitleaks, trivy, notification
+@Library('shared-check') _   // final Scripted pipeline it use 4 functions from src- checkout, gitleaks, trivy, notification
 
 properties([
     parameters([
